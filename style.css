@@ -1,0 +1,107 @@
+@import url("components/base.css");
+@import url("components/reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--transparent-white);
+    min-height: 100dvh;
+    font-family: var(--font);
+}
+
+
+@media (max-width: 40rem) {
+   .cars-container {
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  .box {
+    text-align: left;
+  }
+}
+
+.cars-container{
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 900px;
+    display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+    margin: 20px; 
+}
+
+.car-img{
+    width: 50px;
+    height: auto;
+}
+
+.box{
+    display: flex;
+    flex: 1 1 250px;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--transparent-white);
+   padding: 2.5rem;
+   gap: 1.5rem;
+}
+
+.box:nth-child(1){
+  background-color: var(--bright-orange);
+   
+}
+
+.box:nth-child(2){
+  background-color: var(--dark-cyan);
+   
+}
+
+.box:nth-child(3){
+  background-color: var(--very-dark-cyan);
+   
+}
+
+.box h1{
+    font-family: "Big Shoulders", sans-serif;
+    color: var(--very-light-gray);
+}
+
+.box p{
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.learn-more-btn{
+   align-self: start;
+   border: none;
+    margin-top: 3rem;
+   padding: .5rem 1rem;
+   border-radius: 2rem;
+   cursor: pointer;
+   text-decoration: none;
+   background-color: var(--very-light-gray);
+   transition: all .3s ease;
+}
+
+
+
+.sedan .learn-more-btn{  
+  color: var(--bright-orange);
+}
+
+.suv .learn-more-btn{
+  color: var(--dark-cyan);
+}
+
+.luxury .learn-more-btn{
+  color: var(--very-dark-cyan);
+}
+
+.learn-more-btn:hover {
+  background: none;
+  color:  var(--very-light-gray);
+  border: 2px solid  var(--very-light-gray);
+}
+
